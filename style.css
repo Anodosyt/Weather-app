@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #e0e0e0;
+  color: rgb(83, 83, 83);
+}
+
+.container {
+  min-width: 400px;
+  max-width: 400px;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.form-rounded {
+  border-radius: 2rem 2rem 0 0;
+  border: none;
+}
+.form-rounded-left {
+  border-radius: 0 0 0 2rem;
+  border: none;
+  flex-grow: 2;
+}
+.form-rounded-right {
+  border-radius: 0 0 2rem 0;
+  flex-grow: 1;
+  border: none;
+}
+
+.back-card {
+  border-radius: 2rem !important;
+}
+
+.city-name {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.city-name p {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+/* custom select panel */
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#countrySelect option {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.temp span {
+  font-size: 4rem;
+  white-space: nowrap;
+  letter-spacing: -0.3rem;
+}
+
+.card-mid {
+  line-height: 0.5;
+}
+.condition {
+  line-height: 1;
+}
+
+.highTemp::before {
+  content: "";
+  background: url(./img/up.svg) no-repeat;
+
+  width: 0.6rem;
+  height: 1rem;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+}
+
+.lowTemp::before {
+  content: "";
+  background: url(./img/down.svg) no-repeat;
+
+  width: 0.6rem;
+  height: 1rem;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+}
+
+.icon-container {
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  background: #0c0d43;
+}
+.icon-container img {
+  margin: auto;
+}
+
+.card-bottom {
+  line-height: 0.8;
+}
+
+.card-bottom p {
+  font-size: 2.5rem;
+  letter-spacing: -0.3rem;
+}

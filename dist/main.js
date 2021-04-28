@@ -46,7 +46,7 @@ const updateDOM = data=>{
     `
     
     cardBody.innerHTML = `
-    <div class="card-mid row">
+                <div class="card-mid row soft-appear">
 
                     <div class="col-8 text-center temp">
                         <span>${Math.round(data.main.temp)}&deg;C</span>
@@ -61,13 +61,13 @@ const updateDOM = data=>{
                 </div>
 
                
-                <div style="background-color:${iconBackground}" class="icon-container card shadow mx-auto">
+                <div style="background-color:${iconBackground}" class="icon-container card shadow mx-auto soft-appear">
                     <img src="${iconURL}" alt="">
                 </div>
 
 
               
-                <div class="card-bottom px-5 py-4 row">
+                <div class="card-bottom px-5 py-4 row soft-appear">
 
                     <div class="col text-center">
                         <p>${Math.round(data.main.feels_like)}&deg;C</p>
@@ -99,11 +99,11 @@ document.addEventListener('DOMContentLoaded',(e)=>{
 
 searchForm.addEventListener('submit',(e)=>{
     e.preventDefault();
-    console.log(searchedCity.value,selectedCountry.value);
+   
 
     citySearch(searchedCity.value,selectedCountry.value)
     .then(data=>{
-        console.log(data);
+        
         updateDOM(data);
     })
     .catch(err=>{
